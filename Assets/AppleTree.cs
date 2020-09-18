@@ -4,23 +4,28 @@ using System.Collections;
 public class AppleTree : MonoBehaviour {
 
     // Prefab for instantiating apples
-    public GameObject   applePrefab;
+    public GameObject applePrefab;
 
     // Speed at which the AppleTree moves in meters/second
-    public float        speed = 1f;
+    public float speed = 1f;
 
     // Distance where AppleTree turns around
-    public float        leftAndRightEdge = 10f;
+    public float leftAndRightEdge = 10f;
 
     // Chance that the AppleTree will change directions
-    public float        chanceToChangeDirections = 0.1f;
+    public float chanceToChangeDirections = 0.1f;
 
     // Rate at which Apples will be instantiated
-    public float        secondsBetweenAppleDrops = 1f;
+    public float secondsBetweenAppleDrops = 1f;
 
     void Start () {
-        // Dropping apples every second
-    }
+		InvokeRepeating( "DropApple", 2f, secondsBetweenAppleDrops );
+	}
+
+	void DropApple() {
+		GameObject apple = Instantiate( applePrefab ) as GameObject;
+		apple.transform.position = transform.position;
+	}
 
     void Update () {
         // Basic Movement
@@ -36,4 +41,11 @@ public class AppleTree : MonoBehaviour {
 			speed = -Mathf.Abs(speed); // Move left
 		} 
     }
+	
+	void FixedUpdate() {
+		// Changing Direction Randomly
+		if ( Random.value < chanceToChangeDirections ) {
+			speed *= -1;  // Change direction
+		}
+	}
 }
