@@ -20,6 +20,7 @@ public class ApplePicker : MonoBehaviour {
             basketList.Add( tBasketGO );
         }
     }
+    
     public void AppleDestroyed() {                                          // 2
         // Destroy all of the falling Apples
         GameObject[] tAppleArray=GameObject.FindGameObjectsWithTag("Apple");// 3
