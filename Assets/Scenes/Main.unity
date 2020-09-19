@@ -123,6 +123,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1038616654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7657899143551640547, guid: ba6a5d155f579b840ac45b8840d27240, type: 3}
+  m_PrefabInstance: {fileID: 7649085716133872120}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1038616656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038616654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9414f8a5f8fca4f4fa2a80c80351cead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applePrefab: {fileID: 1796983579699607466, guid: 1cfcef2f4df19cb4287ad161c54a8258, type: 3}
+  speed: 3
+  leftAndRightEdge: 10
+  chanceToChangeDirections: 0.1
+  secondsBetweenAppleDrops: 1
 --- !u!1 &1426797701
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,9 +428,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5537016516713939202, guid: ba6a5d155f579b840ac45b8840d27240, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104020132792262118, guid: ba6a5d155f579b840ac45b8840d27240, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7657899143551640547, guid: ba6a5d155f579b840ac45b8840d27240, type: 3}
       propertyPath: m_Name
       value: AppleTree
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7657899143551640547, guid: ba6a5d155f579b840ac45b8840d27240, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -3205342948758973438, guid: ba6a5d155f579b840ac45b8840d27240, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ba6a5d155f579b840ac45b8840d27240, type: 3}
